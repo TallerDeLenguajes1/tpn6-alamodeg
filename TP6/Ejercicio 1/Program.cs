@@ -6,7 +6,8 @@ namespace Ejercicio_1
     {
         static void Main(string[] args)
         {
-            int num,resto,reverso = 0;
+            int num, resto;
+            int reverso = 0;
             do
             {
                 Console.WriteLine("Ingrese un numero POSITIVO para mostrar su reverso: ");
@@ -20,6 +21,7 @@ namespace Ejercicio_1
                 num = num / 10;
                 reverso = (reverso + resto) * 10;
             }
+            reverso = reverso / 10; //Eliminar el 0 de la operacion anterior
             Console.WriteLine("El reverso del numero es " + reverso);
         }
     }
