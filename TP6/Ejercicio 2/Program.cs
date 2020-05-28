@@ -7,7 +7,7 @@ namespace Ejercicio_2
     {
         static void Main(string[] args)
         {
-            int opcion=0;
+            int opcion = 0, a, b;
             do
             {
                 Console.WriteLine("----CALCULADORA SIMPLE---");
@@ -21,98 +21,75 @@ namespace Ejercicio_2
 
                 opcion = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
-                
+                Console.WriteLine("Ingrese un numero:");
+                a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Ingrese el otro numero distinto de 0:");
+                b = Convert.ToInt32(Console.ReadLine());
 
                 switch (opcion)
                 {
+
                     //SUMA
                     case 1:
-                        int a, b;
-                        ConsoleKey respuesta; //Crea una variable para almacenar la tecla presionada
-
-                        Console.WriteLine("Ingrese un numero para calcular la suma:");
-                        a = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Ingrese el otro numero para calcular la suma:");
-                        b = Convert.ToInt32(Console.ReadLine());
-                       
-                        Console.WriteLine("El resultado de la suma es " + (a+b));
+                        Console.WriteLine("El resultado de la suma es " + (a + b));
+                        string respuesta1;
                         do
                         {
-                            Console.WriteLine("¿Desea realizar otra operacion?[ss/nn]");
-                            Console.ReadKey();//Lee la tecla presionada
-                            respuesta = Console.ReadKey().Key; // Guarda la respuesta del usuario
-                            Console.WriteLine(); // Breaks the line.
-                        } while (respuesta != ConsoleKey.S && respuesta != ConsoleKey.N); //Controla el loop
-                        if (respuesta == ConsoleKey.S)
+                            Console.WriteLine("¿Desea realizar otra operacion?[Si/No]");
+                            respuesta1 = Console.ReadLine();//Lee la tecla presionada
+                        } while (respuesta1.ToUpper() != "N"); //Controla el loop
+                        if (respuesta1 == "N")
                         {
                             Console.Clear();
                             break;
                         }
                         else return;
+
                     //RESTA
                     case 2:
-                        int c, d;
-
-                        Console.WriteLine("Ingrese un numero para calcular la resta:");
-                        c = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Ingrese el otro numero para calcular la resta:");
-                        d = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("El resultado de la resta es " + (c - d));
-
+                        Console.WriteLine("El resultado de la resta es " + (a - b));
+                        string respuesta2;
                         do
                         {
-                            Console.WriteLine("¿Desea realizar otra operacion?[ss/nn]");
-                            Console.ReadKey();
-                            respuesta = Console.ReadKey().Key;
-                            Console.WriteLine();
-                        } while (respuesta != ConsoleKey.S && respuesta != ConsoleKey.N);
-                        if (respuesta == ConsoleKey.S)
+                            Console.WriteLine("¿Desea realizar otra operacion?[Si/No]");
+                            respuesta2 = Console.ReadLine();//Lee la tecla presionada
+                        } while (respuesta2.ToUpper() != "N"); //Controla el loop
+                       
+                        if (respuesta2 == "N")
                         {
                             Console.Clear();
                             break;
                         }
                         else return;
+
                     //MULTIPLICACION
                     case 3:
-                        int e, f;
-
-                        Console.WriteLine("Ingrese un numero para calcular el producto:");
-                        e = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Ingrese el otro numero para el producto:");
-                        f = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("El resultado del producto es " + (e * f));
-
+                        Console.WriteLine("El resultado de la multiplicacion es " + (a * b));
+                        string respuesta3;
                         do
                         {
-                            Console.WriteLine("¿Desea realizar otra operacion?[ss/nn]");
-                            Console.ReadKey();
-                            respuesta = Console.ReadKey().Key; 
-                            Console.WriteLine(); 
-                        } while (respuesta != ConsoleKey.S && respuesta != ConsoleKey.N);
-                        if (respuesta == ConsoleKey.S)
+                            Console.WriteLine("¿Desea realizar otra operacion?[Si/No]");
+                            respuesta3 = Console.ReadLine();//Lee la tecla presionada
+                        } while (respuesta3.ToUpper() != "N"); //Controla el loop
+                       
+                        if (respuesta3 == "N")
                         {
                             Console.Clear();
                             break;
                         }
                         else return;
+
                     //DIVISION
                     case 4:
-                        int g, h;
-
-                        Console.WriteLine("Ingrese un numero para calcular el cociente:");
-                        e = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Ingrese el otro numero para el cociente(distinto de 0):");
-                        f = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("El resultado del cociente es " + (e / f));
-
+                        Console.WriteLine("El resultado de la division es " + (a / b));
+                        string respuesta4;
                         do
                         {
-                            Console.WriteLine("¿Desea realizar otra operacion?[ss/nn]");
-                            Console.ReadKey();
-                            respuesta = Console.ReadKey().Key;
-                            Console.WriteLine();
-                        } while (respuesta != ConsoleKey.S && respuesta != ConsoleKey.N);
-                        if (respuesta == ConsoleKey.S)
+                            Console.WriteLine("¿Desea realizar otra operacion?[Si/No]");
+                            respuesta4 = Console.ReadLine();//Lee la tecla presionada
+                        } while (respuesta4.ToUpper() != "N"); //Controla el loop
+
+                        if (respuesta4 == "N")
                         {
                             Console.Clear();
                             break;
